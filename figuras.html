@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras geométricas | Curso práctico de JavaScript en Platzi  </title>
+</head>
+<body>
+  <header>
+    <h1>
+         Calcular perímetro y área
+    </h1>
+    <p> </p>
+  </header>
+  <section>
+    <!-- <h2> Calcula el área y perímetro de un cuadrado</h2>
+    <form>
+        <label for="InputCuadrado">
+            Escribe cuánto mide cada lado de tu cuadrado
+        </label>
+        <input id="InputCuadrado"  type="number"/>
+        <button type="button" onclick="calcularPerimetroCuadrado()">
+            Calcular el perímetro
+        </button>
+        <button type="button" onclick="calcularAreaCuadrado()">
+            Calcular el área
+        </button>
+    </form> -->
+    <h2>Selecciona la figura geométrica y calcula </h2>
+    <h3>(Perimetro y área de circunferencia a partir de radio conocido)</h3>
+    <form id="form" >
+       
+        <select name = "" id="figuras" onchange="selectFig()">
+            <option id="triangulo"  value="triangulo">Triangulo</option>
+            <option id="cuadrado" value="cuadrado">Cuadrado</option>
+            <option id="circunferencia" value="circunferencia">Circunferencia</option>
+        </select>
+        <input id="lado1" type="number">
+        <input id="lado2" type="number">
+        <input id="base" type="number">
+        <button type="button" onclick="calcularP()">cacular perimetro</button>
+        <button type="button" onclick="calcularA()">calcular el área</button>
+      
+    </form>
+  </section>
+
+     <script src="./figuras.js"></script>
+     
+</body>
+</html>
