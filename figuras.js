@@ -26,7 +26,17 @@ console.groupEnd();
         return (base * altura)/2 ;
 
 }  
-   
+    function perimetroTrianguloIsos(lado1,base){
+    return 2 * lado1 + base;
+
+}
+    function alturaTrianguloIsos( lado1,base){
+     const alturaIsos =  ((lado1 * lado1) - (base/2)*(base/2));
+     const raiz = Math.sqrt(alturaIsos);
+     return raiz;
+    
+
+}    
 
 console.groupEnd();
 
@@ -93,19 +103,20 @@ function selectFig() {
         document.getElementById('lado2').style.display = 'none';
         document.getElementById('base').style.display = 'none';
 
-    }
-     else {
-
-        document.getElementById('lado2').style.display = ''; // y con esto se vuelve a mostrar los elementos ocultos
-        document.getElementById('base').style.display = '';
-
-    } if (figura == "circunferencia"){
+    } else if (figura == "circunferencia"){
 
         document.getElementById('lado2').style.display = 'none';
         document.getElementById('base').style.display = 'none';
 
 
-}
+    } 
+
+     else {
+
+        document.getElementById('lado2').style.display = ''; // y con esto se vuelve a mostrar los elementos ocultos
+        document.getElementById('base').style.display = '';
+
+    } 
   }
 
 
@@ -128,6 +139,14 @@ function calcularP(){
         
 
     }
+    if (figura =="trianguloIsos"){
+
+        const perimetro = perimetroTrianguloIsos(value1,value3);
+        alert (perimetro);
+  
+              
+    }
+
     if (figura =="cuadrado"){
       
         const perimetro = perimetroCuadrado(value1)
@@ -157,7 +176,7 @@ function calcularA(){
     const  limpiar = document.getElementById("form").reset();
     if (figura =="triangulo"){
 
-        const area = areaTriangulo(value1,value2,value3);
+        const area = areaTriangulo(value1,value3);
         alert (area);
         limpiar(form);
 
